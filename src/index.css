@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+HTML{
+    background-color: #F5F5F5;
+    /* width: 1250px; */
+    /* width: 100%; */
+    margin-left: auto;
+    margin-right: auto;
+ }

@@ -1,0 +1,16 @@
+   const [isSearchOpen, setIsSearchOpen] = useState(false);
+
+    const toggleSearchBar = () => {
+        setIsSearchOpen(!isSearchOpen);
+    };
+
+
+     <div className="block md:hidden mr-4 cursor-pointer" onClick={toggleSearchBar}>
+                        <SearchIcon className="text-pink-600" />
+                    </div>
+
+     {isSearchOpen && (
+                <div className="block md:hidden p-4 bg-gray-100">
+                    <SearchBar />
+                </div>
+            )}
