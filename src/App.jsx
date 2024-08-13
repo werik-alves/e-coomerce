@@ -9,7 +9,7 @@ export function App() {
       <div className="w-full mx-auto bg-grayscale-light-gray-3 min-h-screen">
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path='/produtos' element={<ProctListingPage/>}></Route>
+          <Route path='/produtos' element={<ProctListingPage/>}/>
           <Route path="/product/:id" element={<ProductViewPage />} />
         </Routes>
       </div>
