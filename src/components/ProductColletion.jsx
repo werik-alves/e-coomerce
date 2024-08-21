@@ -96,7 +96,7 @@ const ProductCollection = () => {
         </div>
         
         <div 
-          className="flex justify-center gap-16 pt-3 overflow-x-scroll cursor-grab active:cursor-grabbing"
+          className="lg:flex lg:justify-center lg:gap-4 flex  pt-3 overflow-x-scroll cursor-grab active:cursor-grabbing"
           ref={sliderRef}
           onMouseDown={handleMouseDown}
           onMouseLeave={handleMouseLeaveOrUp}
