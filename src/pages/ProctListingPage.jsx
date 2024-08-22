@@ -148,6 +148,8 @@ const ProductListingPage = () => {
       },
   ];
 
+  const [isFilterVisible, setIsFilterVisible] = useState(true);
+  
   const handleFilterChange = (category, option) => {
     setSelectedFilters(prevState => {
       const categoryFilters = prevState[category];
@@ -178,17 +180,36 @@ const ProductListingPage = () => {
     <div className="container mx-auto pt-5 max-w-[1250px]">
       <div className="flex">
         {/* Barra lateral de filtros */}
-        <div className="w-[290px] p-4 bg-white mr-6">
-          {filters.map((filter, index) => (
-            <FilterGroup
-              key={index}
-              title={filter.title}
-              inputType={filter.inputType}
-              options={filter.options}
-              onChange={handleFilterChange}
-            />
-          ))}
-        </div>
+        {isFilterVisible && (
+          <div className="w-[290px] p-4 bg-white mr-6 relative">
+            <button
+              className="absolute top-2 right-2 text-red-500 md:hidden"
+              onClick={() => setIsFilterVisible(false)}
+            >
+              X
+            </button>
+            {filters.map((filter, index) => (
+              <FilterGroup
+                key={index}
+                title={filter.title}
+                inputType={filter.inputType}
+                options={filter.options}
+                onChange={handleFilterChange}
+              />
+            ))}
+          </div>
+        )}
+
+        {/* Botão flutuante para mostrar a barra de filtros */}
+        {!isFilterVisible && (
+          <button
+            className="fixed top-16 left-4 bg-primary text-white p-2 rounded-full shadow-lg z-50"
+            onClick={() => setIsFilterVisible(true)}
+          >
+            &#9776; {/* Ícone de hambúrguer */}
+          </button>
+        )}
+
         {/* Listagem de produtos */}
         <div className="flex-1">
           <SectionProduto title={`Resultados para "Tênis" - ${filteredProducts.length} produtos`} titleAlign="left">
@@ -197,8 +218,8 @@ const ProductListingPage = () => {
         </div>
       </div>
     </div>
-    <Footer/>
-    </>
+    <Footer />
+  </>
   );
 }
 
