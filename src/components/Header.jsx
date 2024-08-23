@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button, CssBaseline, ThemeProvider, createTheme } from "@mui/material";
 import SearchBar from "./Seach"; 
-import LogoImage from './Logo';
+// import LogoImage from './Logo';
 import ImageIcon from '../assets/image/mini-cart.svg';
 import MenuIcon from '@mui/icons-material/Menu';  // Ícone de menu para dispositivos móveis
 import SearchIcon from '@mui/icons-material/Search'; // Ícone de pesquisa
@@ -31,6 +31,19 @@ const Header = () => {
         setSearchOpen(!searchOpen);
     };
 
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth >= 768) {
+                setMenuOpen(false);
+            }
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
     return (
         <ThemeProvider theme={theme}>
             <CssBaseline />
@@ -41,7 +54,8 @@ const Header = () => {
                         <MenuIcon style={{ color: '#C92071' }} onClick={toggleMenu} />
                     </div>
                     <div className="flex items-center">
-                        <LogoImage />
+                        {/* <LogoImage /> */}
+                        <h1 className="text-4xl">LOGO</h1>
                     </div>
                     <div className="hidden md:flex flex-1 justify-center items-center space-x-4">
                         <SearchBar />
@@ -89,21 +103,22 @@ const Header = () => {
             {/* Mobile Menu */}
             <div className={`fixed inset-y-0 left-0 bg-white w-3/4 max-w-xs z-50 transform ${menuOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out`}>
                 <div className="flex justify-between items-center p-4">
-                    <LogoImage />
+                    {/* <LogoImage /> */}
+                    <h1 className="text-3xl">LOGO</h1>
                     <CloseIcon style={{ color: '#C92071', cursor: 'pointer' }} onClick={toggleMenu} />
                 </div>
                 <nav className="p-4">
                     <h2 className="text-xl font-bold mb-4">Páginas</h2>
-                    <Link href="/" underline="none" className="block mb-4 pb-5 text-black hover:text-primary">
+                    <Link href="/" underline="none" className="block mb-4 pb-5 text-black hover:text-black">
                         Home
                     </Link>
-                    <Link href="/produtos" underline="none" className="block mb-4 pb-5 text-black hover:text-primary">
+                    <Link href="/produtos" underline="none" className="block mb-4 pb-5 text-black hover:text-black">
                         Produtos
                     </Link>
-                    <Link href="#" underline="none" className="block mb-4 pb-5 text-black hover:text-primary">
+                    <Link href="#" underline="none" className="block mb-4 pb-5 text-black hover:text-black">
                         Categorias
                     </Link>
-                    <Link href="#" underline="none" className="block mb-4 text-black hover:text-primary">
+                    <Link href="#" underline="none" className="block mb-4 text-black hover:text-black">
                         Meus Pedidos
                     </Link>
                 </nav>

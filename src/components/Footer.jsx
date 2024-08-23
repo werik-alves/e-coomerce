@@ -1,4 +1,4 @@
-import LogoAlternativa from './LogoAlternativa';
+// import LogoAlternativa from './LogoAlternativa';
 import Information from './Information';
 import FacebookIcon from '../assets/image/facebook.svg';
 import TwitterIcon from '../assets/image/twitter.svg';
@@ -31,7 +31,8 @@ const Footer = () => {
     <div className="w-full bg-grayscale-dark-gray p-8 text-white">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 p-10">
         <div>
-          <LogoAlternativa/>
+          {/* <LogoAlternativa/> */}
+          <h1 className='text-2xl'>LOGO</h1>
           <p className="mt-4 mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
           <div className="flex space-x-4">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
@@ -50,7 +51,7 @@ const Footer = () => {
         <Information title="Contato" informations={contactInfo} />
       </div>
       <hr className="my-8 border-white" />
-      <p className="text-center">© 2024 Digital College</p>
+      <p className="text-center">© 2024 Werik Alves</p>
     </div>
   );
 };
