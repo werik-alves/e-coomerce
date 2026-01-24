@@ -61,7 +61,7 @@ const ProductCollection = () => {
         <div className="mb-4">
           <h1 className="text-2xl">Coleções em destaque</h1>
         </div>
-        <div className="sm:flex sm:pb-10 gap-4">
+        <div className="flex flex-col sm:flex-row pb-10 gap-4">
           <div className="relative rounded-lg border">
             <div className="absolute top-4 left-4 bg-warning text-grayscale-white font-bold px-2 py-1 rounded-full">
               30% OFF

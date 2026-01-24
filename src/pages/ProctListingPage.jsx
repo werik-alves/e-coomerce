@@ -181,7 +181,7 @@ const ProductListingPage = () => {
       <div className="flex">
         {/* Barra lateral de filtros */}
         {isFilterVisible && (
-          <div className="w-[290px] p-4 bg-white mr-6 relative">
+          <div className="fixed inset-0 z-50 w-full h-full overflow-y-auto bg-white p-4 md:static md:w-[290px] md:h-auto md:overflow-visible md:mr-6 relative">
             <button
               className="absolute top-2 right-2 text-red-500 md:hidden"
               onClick={() => setIsFilterVisible(false)}

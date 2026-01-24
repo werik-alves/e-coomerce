@@ -20,7 +20,7 @@ const Gallery = ({ className, width, height, radius, showThumbs, images }) => {
 
     return (
         <div className={`relative ${className}`} style={{ width, height }}>
-            <div className="relative overflow-hidden" style={{ borderRadius: radius }}>
+            <div className="relative overflow-hidden w-full h-full" style={{ borderRadius: radius }}>
                 <img src={images[currentIndex].src} alt={`Slide ${currentIndex + 1}`} className="w-full h-full object-cover" />
                 <button 
                     className={`absolute top-1/2 transform -translate-y-1/2 left-0 ${currentIndex === 0 && 'opacity-50 cursor-not-allowed'}`} 

@@ -55,7 +55,7 @@ const Section = () => {
                         className="w-full h-64 md:w-1/3 md:h-full object-contain flex justify-center mb-8 md:mb-0"
                     />
                 </div>
-                <img src={ImageOrnament} alt="ornament" className="absolute right-2 top-20 w-20 h-20 md:w-40 md:h-40" />
+                <img src={ImageOrnament} alt="ornament" className="hidden md:block absolute right-2 top-20 w-20 h-20 md:w-40 md:h-40" />
                 <div className="flex justify-center gap-5 pt-9">
                     <span className="w-4 h-4 rounded-lg bg-primary cursor-pointer"></span>
                     <span className="w-4 h-4 rounded-lg bg-gray-300 cursor-pointer"></span>

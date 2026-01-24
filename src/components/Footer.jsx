@@ -28,8 +28,8 @@ const Footer = () => {
   ];
 
   return (
-    <div className="w-full bg-grayscale-dark-gray p-8 text-white">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 p-10">
+    <div className="w-full bg-grayscale-dark-gray p-4 md:p-8 text-white">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 p-4 md:p-10">
         <div>
           {/* <LogoAlternativa/> */}
           <h1 className='text-2xl'>LOGO</h1>

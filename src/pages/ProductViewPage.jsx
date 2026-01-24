@@ -54,8 +54,8 @@ const ProductViewPage = () => {
       <Header />
       <div className="container mx-auto pt-5 max-w-[1250px] px-4 md:px-0">
         <div className="flex flex-col md:flex-row md:justify-between">
-          <div className="w-full sm:w-[700px]">
-            <Gallery images={product.images.map((img) => ({ src: img }))} showThumbs width="100%" height="570px" radius="4px" />
+          <div className="w-full lg:max-w-[700px]">
+            <Gallery images={product.images.map((img) => ({ src: img }))} showThumbs width="100%" height="auto" className="!h-[300px] md:!h-[570px]" radius="4px" />
           </div>
           <div className="mt-8 md:mt-0 md:ml-8 flex-1">
             <BuyBox

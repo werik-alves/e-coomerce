@@ -69,7 +69,7 @@ const ProductOptions = () => {
           <img className='pl-3' src={ImageIcon} alt="icone-seta" />
         </h2>
       </div>
-      <div className=" sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
+      <div className="w-full">
         <ProductListing products={products} />
       </div>
     </div>
